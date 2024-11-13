@@ -76,8 +76,8 @@ try:
 
     for item in container_client.list_blob_names():
         print(item)
-    # with open(file="test.txt", mode="rb") as data:
-    #     blob = container_client.upload_blob(name="test.txt", data=data, overwrite = True)
+    with open(file="results.csv", mode="rb") as data:
+        blob = container_client.upload_blob(name="results.csv", data=data, overwrite = True)
 
 except Exception as ex:
     print(ex)
